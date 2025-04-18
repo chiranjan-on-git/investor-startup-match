@@ -13,6 +13,17 @@ const ProfilePage = () => {
     return <Navigate to="/login" />;
   }
 
+  // Format the date safely by handling both string and Date objects
+  const formatDate = (date: Date | string) => {
+    if (!date) return 'N/A';
+    
+    // Convert to a Date object if it's a string
+    const dateObj = date instanceof Date ? date : new Date(date);
+    
+    // Check if the date is valid before formatting
+    return isNaN(dateObj.getTime()) ? 'Invalid date' : dateObj.toLocaleDateString();
+  };
+
   return (
     <Layout>
       <div className="max-w-3xl mx-auto">
@@ -37,7 +48,7 @@ const ProfilePage = () => {
               </div>
               <div>
                 <p className="text-sm text-gray-500">Account Created</p>
-                <p className="font-medium">{user.createdAt.toLocaleDateString()}</p>
+                <p className="font-medium">{formatDate(user.createdAt)}</p>
               </div>
             </div>
             

@@ -1,5 +1,4 @@
-
-import { Startup, Investor, Message, Conversation, User, WishlistItem } from '@/types';
+import { Startup, Investor, Message, Conversation, User, WishlistItem, UserRole } from '@/types';
 
 export const mockUsers: User[] = [
   {
