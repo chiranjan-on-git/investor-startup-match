@@ -211,7 +211,7 @@ export const mockMessages: Message[] = [
     id: '1',
     senderId: '1',
     receiverId: '2',
-    content: 'Hello, I'm interested in learning more about your startup.',
+    content: "Hello, I'm interested in learning more about your startup.",
     timestamp: new Date('2023-05-15T14:30:00'),
     read: true
   },

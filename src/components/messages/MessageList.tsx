@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import { useAuth } from '@/contexts/AuthContext';
 import { mockConversations, mockUsers, mockMessages } from '@/data/mockData';
 import { formatDistanceToNow } from 'date-fns';
@@ -23,8 +23,8 @@ const MessageList: React.FC = () => {
         <h3 className="font-medium text-lg mb-2">No messages yet</h3>
         <p className="text-gray-500">
           {user.role === 'investor' 
-            ? 'Reach out to startups you're interested in!'
-            : 'No investors have contacted you yet.'}
+            ? "Reach out to startups you're interested in!"
+            : "No investors have contacted you yet."}
         </p>
       </div>
     );
